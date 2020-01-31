@@ -396,8 +396,8 @@ namespace DotLiquid
             // Can't dispose this new StreamWriter, because it would close the
             // passed-in stream, which isn't up to us.
             using StreamWriter streamWriter = new StreamWriterWithFormatProvider(stream, parameters.FormatProvider);
-            await this.RenderInternalAsync(streamWriter, parameters);
-            await streamWriter.FlushAsync();
+            await this.RenderInternalAsync(streamWriter, parameters).ConfigureAwait(false);
+            await streamWriter.FlushAsync().ConfigureAwait(false);
         }
 
         /// <summary>

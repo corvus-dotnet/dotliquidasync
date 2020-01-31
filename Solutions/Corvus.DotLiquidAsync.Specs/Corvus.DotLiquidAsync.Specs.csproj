@@ -5,6 +5,26 @@
     <LangVersion>latest</LangVersion>
     <IsPackable>false</IsPackable>
     <RootNamespace>Corvus.Extensions.Specs</RootNamespace>
+
+    <!--
+    RCS1090 - disabling ConfigureAwait calls in test for now - we have a work item #26 for determining whether it's safe to put those back.
+    
+    Disabling warnings we'd normally accept to avoid non-functional changes that would make it hard to
+    see how this project differs from the one from which it was forked
+    RCS1018 - specify accessibility
+    RCS1021 - simplify lambda
+    RCS1036 - redundant empty lines
+    RCS1048 - use lambda not anonymous method
+    RCS1057 - missing empty lines
+    RCS1077 - optimize LINQ call and similar
+    RCS1089 - use ++
+    RCS1104 - simplify conditional expression
+    RCS1118 - make variables const
+    RCS1163 - unused parameters
+    RCS1170 - use auto-properties
+    RCS1192 - use regular string instead of '@'
+    -->
+    <NoWarn>RCS1018;RCS1021;RCS1036;RCS1048;RCS1057;RCS1077;RCS1089;RCS1090;RCS1104;RCS1118;RCS1163;RCS1170;RCS1192</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

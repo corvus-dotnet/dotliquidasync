@@ -13,6 +13,32 @@
 
   <Import Project="..\Common.NetStandard_2_0.proj" />
 
+  <PropertyGroup>
+    <!--
+    There are various Roslynator warnings we disable because this was forked, and for the time being at least, we
+    want to avoid introducing superficial differences between this code and the original. Normally we would
+    conform with these rules, but in this case it makes it harder to see differences between this fork and
+    the original codebase
+    RCS1015 - use nameof
+    RCS1021 - simplify lambda
+    RCS1057 - missing empty lines
+    RCS1058 - use compound assignment
+    RCS1073 - convert if to return
+    RCS1077, RCS1080 - optimize LINQ call and similar
+    RCS1085, RCS1170 - use auto-properties
+    RCS1104 - simplify conditional expression
+    RCS1128 - Use coalesce
+    RCS1146 - Use conditional access
+    RCS1156 - use string.Length instead of comparison with empty
+    RCS1163 - unused parameters
+    RCS1192 - use regular string instead of '@'
+    RCS1220 - using pattern matching where applicable
+    RCS1226 - using paragraphs where suitable in xmldoc
+    RCS1235 - optimize string.Join
+    RCS1239 - use for instead of while
+    -->
+    <NoWarn>RCS1015;RCS1021;RCS1057;RCS1058;RCS1073;RCS1077;RCS1080;RCS1085;RCS1104;RCS1128;RCS1146;RCS1156;RCS1163;RCS1170;RCS1192;RCS1220;RCS1226;RCS1235;RCS1239</NoWarn>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Update="DotLiquid\Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>

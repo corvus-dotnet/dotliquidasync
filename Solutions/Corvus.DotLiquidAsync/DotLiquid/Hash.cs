@@ -20,7 +20,7 @@ namespace DotLiquid
         private readonly object defaultValue;
 
         /// <summary>
-        ///
+        /// Build a hash from the properties of an object of any type (including anonymous types).
         /// </summary>
         /// <param name="anonymousObject"></param>
         /// <param name="includeBaseClassProperties">If this is set to true, method will map base class' properties too. </param>

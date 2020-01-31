@@ -91,7 +91,7 @@ namespace DotLiquid
         internal async Task<string> RenderAsync(Context context)
         {
             using TextWriter result = new StringWriter(context.FormatProvider);
-            await this.RenderAsync(context, result);
+            await this.RenderAsync(context, result).ConfigureAwait(false);
             return result.ToString();
         }
     }
