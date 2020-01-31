@@ -292,7 +292,7 @@ namespace DotLiquid.Tests
             dataRow["Column1"] = "Hello";
             dataRow["Column2"] = "World";
 
-            var tpl = Template.Parse(" {{ row.column1 }} ");
+            var tpl = Template.Parse(" {{ row.Column1 }} ");
             Assert.AreEqual(" Hello ", await tpl.RenderAsync(Hash.FromAnonymousObject(new { row = new DataRowDrop(dataRow) })));
         }
 
