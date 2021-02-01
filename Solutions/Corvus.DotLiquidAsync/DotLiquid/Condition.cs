@@ -119,7 +119,7 @@ namespace DotLiquid
                 {
                     right = Convert.ChangeType(right, left.GetType());
                 }
-                catch (Exception)
+                catch
                 {
                 }
             }

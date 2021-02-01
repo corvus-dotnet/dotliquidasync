@@ -19,7 +19,7 @@ namespace DotLiquid
         public string[] AllowedMembers { get; private set; }
 
         /// <summary>
-        ///
+        /// Creates a <see cref="LiquidTypeAttribute"/>.
         /// </summary>
         /// <param name="allowedMembers">An array of property and method names that are allowed to be called on the object.</param>
         public LiquidTypeAttribute(params string[] allowedMembers)

@@ -51,7 +51,7 @@ namespace DotLiquid
         {
             try
             {
-                await base.RenderAsync(context, result);
+                await base.RenderAsync(context, result).ConfigureAwait(false);
             }
             catch (BreakInterrupt)
             {

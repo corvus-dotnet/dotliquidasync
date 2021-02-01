@@ -113,7 +113,7 @@ namespace DotLiquid
         {
             if (this.Name == null)
             {
-                return null;
+                return Task.FromResult<object>(null);
             }
 
             object output = context[this.Name];

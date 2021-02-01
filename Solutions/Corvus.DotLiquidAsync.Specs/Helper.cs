@@ -4,7 +4,7 @@ namespace DotLiquid.Tests
     using NUnit.Framework;
     using System.Threading.Tasks;
 
-    public class Helper
+    public static class Helper
     {
         public static async Task AssertTemplateResultAsync(string expected, string template, Hash localVariables, INamingConvention namingConvention)
         {
