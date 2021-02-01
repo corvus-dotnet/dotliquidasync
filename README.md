@@ -5,16 +5,17 @@
 
 # Features
 
-DotLiquid is a .Net port of the popular [Ruby Liquid templating
+`Corvus.DotLiquidAsync` is a .Net port of the popular [Ruby Liquid templating
 language](https://shopify.github.io/liquid/). It is a separate project that aims to
 retain the same template syntax as the original, while using .NET coding
 conventions where possible.
 
+This is a fork of the original Dotnet port, see <https://github.com/dotliquid/dotliquid> 
+This differs from the original port in that it enables asynchronous template rendering.
+
 For more information about the original Liquid project, see
 <https://shopify.github.io/liquid/>.
 
-It is a fork of the original Dotnet port, see
-<https://github.com/dotliquid/dotliquid>
 
 ### Why should I use DotLiquid?
 
