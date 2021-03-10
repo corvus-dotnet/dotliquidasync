@@ -118,7 +118,11 @@ namespace DotLiquid
             return expr.Compile();
         }
 
-        public static Hash FromDictionary(IDictionary<string, object> dictionary)
+        public static Hash FromDictionary(IDictionary<string, object> dictionary) => FromKeyValuePairs(dictionary);
+
+        public static Hash FromReadOnlyDictionary(IReadOnlyDictionary<string, object> dictionary) => FromKeyValuePairs(dictionary);
+
+        public static Hash FromKeyValuePairs(IEnumerable<KeyValuePair<string, object>> dictionary)
         {
             var result = new Hash();
 

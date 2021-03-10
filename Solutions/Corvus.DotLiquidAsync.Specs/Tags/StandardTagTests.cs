@@ -86,6 +86,24 @@ namespace DotLiquid.Tests.Tags
                 Hash.FromDictionary(dictionary));
         }
 
+        [Test]
+        public async Task TestForWithNestedDictionaryImmutable()
+        {
+            // Using normal dictionaries because ImmutableDictionary doesn't preserve order, but this test
+            // depends on ordering, so we just pass an ordinary Dictionary to the helper that uses
+            // IReadOnlyDictionary.
+            var dictionary = new Dictionary<string, object> { {
+            "People",
+            new Dictionary<string, object> {
+                    { "ID1", new Dictionary<string, object>{ { "First", "Jane" }, { "Last", "Green" } } },
+                    { "ID2", new Dictionary<string, object>{ { "First", "Mike" }, { "Last", "Doe" } } }
+                }
+            } };
+
+            await Helper.AssertTemplateResultAsync("JaneMike", "{% for item in People %}{{ item.First }}{%endfor%}",
+                Hash.FromReadOnlyDictionary(dictionary));
+        }
+
 
         public class TestDictObject : Drop
         {
