@@ -619,6 +619,14 @@ namespace DotLiquid.Tests
         [Test]
         public void TestDictionaryAsVariable()
         {
+            this._context["dynamic"] = Hash.FromReadOnlyDictionary(new Dictionary<string, object> { ["lambda"] = "Hello" });
+
+            Assert.AreEqual("Hello", this._context["dynamic.lambda"]);
+        }
+
+        [Test]
+        public void TestReadOnlyDictionaryAsVariable()
+        {
             this._context["dynamic"] = Hash.FromDictionary(new Dictionary<string, object> { ["lambda"] = "Hello" });
 
             Assert.AreEqual("Hello", this._context["dynamic.lambda"]);
@@ -628,6 +636,14 @@ namespace DotLiquid.Tests
         public void TestNestedDictionaryAsVariable()
         {
             this._context["dynamic"] = Hash.FromDictionary(new Dictionary<string, object> { ["lambda"] = new Dictionary<string, object> { ["name"] = "Hello" } });
+
+            Assert.AreEqual("Hello", this._context["dynamic.lambda.name"]);
+        }
+
+        [Test]
+        public void TestNestedReadonlyDictionaryAsVariable()
+        {
+            this._context["dynamic"] = Hash.FromReadOnlyDictionary(new Dictionary<string, object> { ["lambda"] = new Dictionary<string, object> { ["name"] = "Hello" } });
 
             Assert.AreEqual("Hello", this._context["dynamic.lambda.name"]);
         }
