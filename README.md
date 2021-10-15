@@ -1,6 +1,6 @@
 # Corvus.DotLiquidAsync
-[![Build Status](https://dev.azure.com/endjin-labs/Corvus.DotLiquidAsync/_apis/build/status/corvus-dotnet.Corvus.DotLiquidAsync?branchName=master)](https://dev.azure.com/endjin-labs/Corvus.DotLiquidAsync/_build/latest?definitionId=4&branchName=master)
-[![GitHub license](https://img.shields.io/badge/License-Apache%202-blue.svg)](https://raw.githubusercontent.com/corvus-dotnet/Corvus.DotLiquidAsync/master/LICENSE)
+[![Build Status](https://dev.azure.com/endjin-labs/Corvus.DotLiquidAsync/_apis/build/status/corvus-dotnet.Corvus.DotLiquidAsync?branchName=main)](https://dev.azure.com/endjin-labs/Corvus.DotLiquidAsync/_build/latest?definitionId=4&branchName=main)
+[![GitHub license](https://img.shields.io/badge/License-Apache%202-blue.svg)](https://raw.githubusercontent.com/corvus-dotnet/Corvus.DotLiquidAsync/main/LICENSE)
 [![IMM](https://endimmfuncdev.azurewebsites.net/api/imm/github/corvus-dotnet/Corvus.DotLiquidAsync/total?cache=false)](https://endimmfuncdev.azurewebsites.net/api/imm/github/corvus-dotnet/Corvus.DotLiquidAsync/total?cache=false)
 
 # Features
@@ -57,7 +57,7 @@ await template.RenderAsync(Hash.FromAnonymousObject(new { name = "tobi" })); // 
 
 ## Licenses
 
-[![GitHub license](https://img.shields.io/badge/License-Apache%202-blue.svg)](https://raw.githubusercontent.com/corvus-dotnet/Corvus.DotLiquidAsync/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/License-Apache%202-blue.svg)](https://raw.githubusercontent.com/corvus-dotnet/Corvus.DotLiquidAsync/main/LICENSE)
 
 Corvus.DotLiquidAsync is available under the Apache 2.0 open source license.
 
