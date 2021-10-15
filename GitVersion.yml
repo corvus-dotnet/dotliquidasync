@@ -7,7 +7,7 @@
 mode: ContinuousDeployment
 branches:
   master:
-    regex: ^master
+    regex: ^master|main
     tag: preview
     increment: patch
   dependabot-pr:
@@ -16,6 +16,7 @@ branches:
     source-branches:
     - develop
     - master
+    - main
     - release
     - feature
     - support
